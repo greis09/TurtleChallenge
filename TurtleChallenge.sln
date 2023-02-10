@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TurtleChallenge", "TurtleChallenge\TurtleChallenge.csproj", "{C7370673-E58B-468A-B340-72E763E34410}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TurtleGame", "TurtleGame\TurtleGame.csproj", "{4BE9E5E2-2095-40FE-859F-E185C81A97BE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TurtleGame.Tests", "TurtleGame.Tests\TurtleGame.Tests.csproj", "{F53C79EE-E942-4160-A07E-B49C343F0B02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TurtleGame.Adapters", "TurtleGame.Adpaters\TurtleGame.Adapters.csproj", "{65D21801-91C8-4750-AD62-20D7D5719754}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TurtleGame.Adapters.Tests", "TurtleGame.Adpters.Tests\TurtleGame.Adapters.Tests.csproj", "{406108F8-9075-4A8C-AC69-7431E71E9B58}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{CCB358CB-BF7C-4853-8BAC-79A11B072597}"
+	ProjectSection(SolutionItems) = preProject
+		moves.json = moves.json
+		settings.json = settings.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7370673-E58B-468A-B340-72E763E34410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7370673-E58B-468A-B340-72E763E34410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7370673-E58B-468A-B340-72E763E34410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7370673-E58B-468A-B340-72E763E34410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BE9E5E2-2095-40FE-859F-E185C81A97BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BE9E5E2-2095-40FE-859F-E185C81A97BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BE9E5E2-2095-40FE-859F-E185C81A97BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BE9E5E2-2095-40FE-859F-E185C81A97BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F53C79EE-E942-4160-A07E-B49C343F0B02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F53C79EE-E942-4160-A07E-B49C343F0B02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F53C79EE-E942-4160-A07E-B49C343F0B02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F53C79EE-E942-4160-A07E-B49C343F0B02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65D21801-91C8-4750-AD62-20D7D5719754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65D21801-91C8-4750-AD62-20D7D5719754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65D21801-91C8-4750-AD62-20D7D5719754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65D21801-91C8-4750-AD62-20D7D5719754}.Release|Any CPU.Build.0 = Release|Any CPU
+		{406108F8-9075-4A8C-AC69-7431E71E9B58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{406108F8-9075-4A8C-AC69-7431E71E9B58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{406108F8-9075-4A8C-AC69-7431E71E9B58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{406108F8-9075-4A8C-AC69-7431E71E9B58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D53A476-810E-4C08-A260-669B400D74D0}
+	EndGlobalSection
+EndGlobal

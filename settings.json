@@ -1,0 +1,25 @@
+{
+    "Board": {
+        "Height": 5,
+        "Width": 5
+    },
+    "InitialPosition": {
+        "direction": "N",
+        "X": 1,
+        "Y": 1
+    },
+    "Exit": {
+        "X": 5,
+        "Y": 5
+    },
+    "Mines": [{
+            "X": 1,
+            "Y": 2
+        }, {
+            "X": 3,
+            "Y": 3
+        }
+    ]
+}
+
+
