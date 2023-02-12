@@ -1,5 +1,4 @@
 ﻿using Moq;
-using Newtonsoft.Json;
 using TurtleGame.Adapters.DTO;
 
 namespace TurtleGame.Adapters.Tests
@@ -109,6 +108,47 @@ namespace TurtleGame.Adapters.Tests
             // Assert
             ArgumentException ex = Assert.Throws<ArgumentException>(() => fileAdpter.RunGame(settingsPath, movesPath));
             Assert.That(ex.Message, Is.EqualTo("Error loading settings file."));
+        }
+
+        [Test]
+        public void RunGame_ValidSettingsWithExtrMoves_SuccessResult()
+        {
+            // Arrange
+            var movesPath = "moves.json";
+            var settingsPath = "settings.json";
+
+            var movesFile = new MovesFileDTO
+            {
+                MovesSequences = new List<MoveSequence>
+                {
+                    new MoveSequence
+                    {
+                        Moves = new List<char> { 'R', 'M', 'M', 'M', 'M', 'X', 'R', 'R', 'R', 'M', 'M', 'M', 'M', 'R', 'M' }
+                    }
+                }
+            };
+
+            var settingsFile = new SettingsFileDTO
+            {
+                Board = new Settings.Board(5, 5),
+                InitialPosition = new Settings.Position(1, 1, (char)Settings.DirectionEnum.North),
+                Exit = new Settings.Location(5, 5),
+                Mines = new List<Settings.Location>
+                {
+                    new Settings.Location(1,2),
+                    new Settings.Location(3,3),
+                }
+            };
+            fileManager.Setup(fm => fm.ReadFile<MovesFileDTO>(movesPath)).Returns(movesFile);
+            fileManager.Setup(fm => fm.ReadFile<SettingsFileDTO>(settingsPath)).Returns(settingsFile);
+
+            var fileAdpter = new FileAdapter(fileManager.Object);
+
+            // Act
+            var actual = fileAdpter.RunGame(settingsPath, movesPath);
+
+            // Assert
+            StringAssert.AreEqualIgnoringCase("Sequence 1: Success!! The turtle escaped!\r\n", actual);
         }
     }
 }
